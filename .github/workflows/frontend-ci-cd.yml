@@ -15,8 +15,10 @@ jobs:
 
       - name: List files for debugging
         run: |
-          echo "Listing files and directories..."
-          ls -R
+          echo "Root directory:"
+          ls -a
+          echo "s3 directory:"
+          ls -a s3
 
       - name: Deploy to S3
         run: aws s3 cp s3/index.html s3://waqasdevops/index.html
